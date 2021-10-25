@@ -18,6 +18,17 @@ jobs:
           name: "Say hello"
           command: "echo Hello, World!"
 
+  say-hello-again:
+
+    docker:
+      -image: cimg/base:stable
+    
+    steps:
+      - checkout
+      - run:
+          name: "Say hello again"
+          command: "echo Hello, Worldd!"
+
 # Invoke jobs via workflows
 # See: https://circleci.com/docs/2.0/configuration-reference/#workflows
 workflows:
